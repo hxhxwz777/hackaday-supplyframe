@@ -26,11 +26,20 @@ Datagrid = function(options) {
         widthMap = options.widthMap || {};
 
 
-    AJAX.get(url, function(resData) {
-        data = resData;
-        renderDatagrid(); 
-    });
+    loadData();
 
+    function loadData() {
+        var loading = document.createElement('h1');
+        loading.className = 'supplyframe-loading'
+        loading.innerHTML = 'Loading...'
+        document.body.appendChild(loading);
+
+        AJAX.get(url, function(resData) {
+            document.body.removeChild(document.querySelector('.supplyframe-loading'));
+            data = resData;
+            renderDatagrid();
+        });
+    }
 
     function changePage(isNext) {
         var cachePage = page;

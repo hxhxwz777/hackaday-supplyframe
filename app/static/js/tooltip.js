@@ -32,9 +32,7 @@ Tooltip = function() {
 
     document.body.addEventListener('mouseout', function(e) {
         if(e.target.hasAttribute('data-tooltip')) {
-            setTimeout(function() {
-                document.body.removeChild(document.querySelector('.supplyframe-tooltip'));
-            }, 0);
+            document.body.removeChild(document.querySelector('.supplyframe-tooltip'));
         }
     });
 
