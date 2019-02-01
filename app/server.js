@@ -36,6 +36,10 @@ app.set('views', __dirname);
 app.set('view engine', 'ejs');
 
 
+// Set Express static file route for hosting js and css files
+app.use('/static', express.static(__dirname + '/static'));
+
+
 // Render index page at server-side
 app.get('/', function(req, res) {
     res.render('index');
