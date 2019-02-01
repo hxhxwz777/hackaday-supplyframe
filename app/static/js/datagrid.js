@@ -10,6 +10,8 @@
 * @param {number} [options.pageSize = 5]    - Specifies datagrid rows to show per page, default is 5.
 * @param {number} [options.page = 1]        - Specifies initial page number when datagrid first create, default is 1.
 * @param {string} [options.url]             - Specifies url to load server-side data.
+* @param {string} [options.tooltipField]    - Specifies tooltip field match to which header column.
+* @param {string} [options.tooltipBaseUrl]  - Specifies tooltip base url.
 * @param {object} [options.widthMap]        - Specifies datagrid table header column width.
 */
 
@@ -19,6 +21,8 @@ Datagrid = function(options) {
         pageSize = options.pageSize || 5,
         page = options.page || 1,
         url = options.url,
+        tooltipField = options.tooltipField,
+        tooltipBaseUrl = options.tooltipBaseUrl,
         widthMap = options.widthMap || {};
 
 
@@ -118,10 +122,11 @@ Datagrid = function(options) {
             for(var j = 0; j < keys.length; j++) {
                 var key = keys[j];
                 var cell = document.createElement('td');
-                if(key == 'owner_id') {
-                    var att = document.createAttribute('data-tooltip');
-                    att.value = pageData[i][key];
-                    cell.setAttributeNode(att);
+                if(key == tooltipField) {
+                    //var att = document.createAttribute('data-tooltip');
+                    //att.value = pageData[i][key];
+                    //cell.setAttributeNode(att);
+                    cell.setAttribute('data-tooltip', tooltipBaseUrl + '/' + pageData[i][key]);
                 }
                 cell.innerHTML = pageData[i][key];
                 bodyRow.appendChild(cell);

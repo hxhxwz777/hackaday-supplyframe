@@ -56,6 +56,16 @@ app.get('/projects', function(req, res) {
     });
 });
 
+// API query users
+app.get('/users/:id', function(req, res) {
+    var url = apiData.apiUrl + '/users/' + req.params.id + apiData.apiKey;
+
+    request.get(url, function(error, response, body) {
+        var bodyData = parseJSON(body);
+        res.send(bodyData);
+    });
+});
+
 
 // redirect illegal url visits
 app.all('*', function(req, res) {

@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <script src="static/js/ajax.js"></script>
     <script src="static/js/datagrid.js"></script>
+    <script src="static/js/tooltip.js"></script>
 </head>
 </body>
     <h2>Hackaday SupplyFrame Single Page App</h2>
@@ -23,11 +24,15 @@ function initial() {
         pageSize: 5,
         page: 1,
         url: 'projects',
+        tooltipField: 'owner_id',
+        tooltipBaseUrl: '/users',
         widthMap: {
             description: '1000px',
             summary: '300px'
         }
     });
+
+    var tooltip = new Tooltip();
 }
 
 </script>
