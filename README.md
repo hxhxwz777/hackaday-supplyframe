@@ -7,6 +7,9 @@ $ npm install
 ```bash
 $ node server
 ```
+### Review web page
+Go To `http://localhost:3001`
+
 ### Check List
 1. Use Express.js as web server.
 2. Use EJS as template engine.
