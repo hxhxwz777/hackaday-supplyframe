@@ -52,7 +52,7 @@ app.get('/projects', function(req, res) {
 
     request.get(url, function(error, response, body) {
         var bodyData = parseJSON(body);
-        res.send(bodyData);
+        res.send(bodyData.projects);
     });
 });
 

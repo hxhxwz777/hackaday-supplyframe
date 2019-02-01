@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <title>SupplyFrame</title>
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script src="static/js/ajax.js"></script>
+    <script src="static/js/datagrid.js"></script>
 </head>
 </body>
-    <h1>SupplyFrame</h1>
+    <h2>Hackaday SupplyFrame Single Page App</h2>
+    <div class="supplyframe-grid"></div>
 <body>
+
+<script type="text/javascript">
+
+(function() {
+    initial();
+}());
+
+function initial() {
+    var datagrid = new Datagrid({
+        pageSize: 5,
+        page: 1,
+        url: 'projects',
+        widthMap: {
+            description: '1000px',
+            summary: '300px'
+        }
+    });
+}
+
+</script>
 </html>
