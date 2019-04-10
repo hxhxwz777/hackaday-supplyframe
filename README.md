@@ -1,4 +1,17 @@
-## Hackaday SupplyFrame
+## Hackaday
+
+### Install NVM (Node Version Manager)
+```bash
+$ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+```
+**Note:** On Linux, after running the install script, if you get `nvm: command not found` or see no feedback from your terminal after you type:
+```bash
+command -v nvm
+```
+### Install Node.js and npm (npm will been installed automatically with node)
+```bash
+$ nvm install node
+```
 ### App Install
 ```bash
 $ npm install
