@@ -10,6 +10,7 @@ command -v nvm
 ```
 ### Install Node.js and npm (npm will been installed automatically with node)
 ```bash
+$ source ~/.nvm/nvm.sh
 $ nvm install node
 ```
 ### App Install
