@@ -13,6 +13,11 @@ command -v nvm
 $ source ~/.nvm/nvm.sh
 $ nvm install node
 ```
+### App Initial and install dependace
+```bash
+$ npm init -f
+$ npm install formidable --save
+```
 ### App Install
 ```bash
 $ npm install
