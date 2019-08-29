@@ -20,6 +20,7 @@ $ npm install formidable --save
 ```
 ### App Install
 ```bash
+Linux因为symlink安装不成功时，可以在Windows上安装，因为有vagrant可以同步两边文件，所以在哪边安装差别不大。
 $ npm install
 ```
 ### Run App
